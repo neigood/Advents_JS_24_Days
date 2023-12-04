@@ -26,4 +26,4 @@ const gifts = [2, 1, 3, 5, 3, 2];
 const result = findFirstRepeated(gifts);
 
 // Mostrar el resultado en la consola (puedes ajustar esta parte según tus necesidades).
-console.log(result);  // Salida esperada: 3
+console.log(result);  
