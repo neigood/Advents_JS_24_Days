@@ -23,6 +23,33 @@ console.log(firstRepeatedId3) // 5
 ¡Ojo! Los elfos dicen que esto es una prueba técnica de Google.
 
 
+
+esta es la explicasion del primer codigo donde le hice unas mejoras:
+
+La función `findFirstRepeated` toma un array de números llamado `gifts` como parámetro y devuelve el primer número que se repite en el array. Si no hay ningún número repetido, la función devuelve -1.
+
+Ahora, desglosemos el código paso a paso:
+
+1. `const giftIndices = new Map<number, number>();`: Se crea un nuevo objeto `Map` llamado `giftIndices`. Este mapa se utiliza para realizar un seguimiento de los índices en los que se ha visto cada regalo en el array.
+
+2. `let index = 0;`: Se inicializa una variable `index` con 0. Esta variable se utilizará para llevar un seguimiento del índice actual mientras se recorre el array.
+
+3. `for (const currentGift of gifts) {`: Se inicia un bucle `for...of` que recorre cada elemento del array `gifts`. En cada iteración, el elemento actual se almacena en la variable `currentGift`.
+
+4. `if (giftIndices.has(currentGift)) { return currentGift; }`: Dentro del bucle, se verifica si el regalo actual (`currentGift`) ya está presente en el mapa `giftIndices`. Si es así, significa que este regalo se ha visto antes, y la función devuelve ese regalo, ya que es el primer regalo repetido encontrado.
+
+5. `else { giftIndices.set(currentGift, index); }`: Si el regalo actual no está presente en el mapa, se añade al mapa con la clave como el regalo actual y el valor como el índice actual. Esto significa que se está registrando la primera vez que se ve este regalo y en qué posición del array se encuentra.
+
+6. `index++;`: Se incrementa el índice para el siguiente elemento del array.
+
+7. Después de completar el bucle, si no se ha encontrado ningún regalo repetido, la función devuelve -1.
+
+En resumen, la función utiliza un mapa para llevar un seguimiento de los regalos vistos y sus índices en el array. Al encontrar un regalo que ya ha sido registrado en el mapa, la función devuelve ese regalo como el primero que se repite. Si no se encuentra ningún regalo repetido, devuelve -1.
+
+
+esta es la explicasion al segundo codigo:
+
+
 para poder llegar a la conclusion de estee desafio lo dividi en pasos para ver el panorama completo emnpece con.
 
 Comentario de función: Se proporciona un comentario que explica el propósito de la función findFirstRepeated.
