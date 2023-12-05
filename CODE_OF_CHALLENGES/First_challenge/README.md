@@ -47,6 +47,9 @@ Ahora, desglosemos el código paso a paso:
 En resumen, la función utiliza un mapa para llevar un seguimiento de los regalos vistos y sus índices en el array. Al encontrar un regalo que ya ha sido registrado en el mapa, la función devuelve ese regalo como el primero que se repite. Si no se encuentra ningún regalo repetido, devuelve -1.
 
 
+----------------------------------------------------------************************************--------------------------------------------------
+
+
 esta es la explicasion al segundo codigo:
 
 
