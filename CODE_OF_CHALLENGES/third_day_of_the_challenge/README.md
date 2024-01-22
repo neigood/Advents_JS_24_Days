@@ -22,7 +22,7 @@ La modificación puede ocurrir en cualquier lugar de la cadena.
 La secuencia original puede estar vacía
 
 
-----------------------------------------------------------------******************************************************---------------------------------------------------
+# LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
 Obtención de la longitud de las cadenas originales y modificadas:
 

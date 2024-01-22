@@ -23,7 +23,7 @@ En el mensaje final no deben quedar paréntesis.
 El nivel máximo de anidamiento es 2.
 
 
----------------------------------------------------*************RESOLUCUION****************-----------------------------------------------------
+# LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
 Veamos el código paso a paso y luego veras un resumen de cómo llege a esa solución:
 

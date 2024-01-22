@@ -24,7 +24,7 @@ console.log(firstRepeatedId3) // 5
 
 
 
-esta es la explicasion del primer codigo donde le hice unas mejoras:
+# LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
 La función `findFirstRepeated` toma un array de números llamado `gifts` como parámetro y devuelve el primer número que se repite en el array. Si no hay ningún número repetido, la función devuelve -1.
 

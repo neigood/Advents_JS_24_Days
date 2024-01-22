@@ -22,7 +22,7 @@ const materials = 'psli'
 
 manufacture(gifts, materials) // []
 
-----------------------------------------------------------------***********************---------------------------------------------------------------
+# LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
 ```typescript
 // Definición de la función manufacture que toma un array de regalos y un string de materiales como argumentos.
