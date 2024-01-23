@@ -40,6 +40,29 @@ Los elfos se inspiraron en este reto de Code Wars.
 
 # LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
+function cyberReindeer(road: string, time: number): string[] {
+  const snapshots: string[] = [road];
+  let lastChar: string = '.';
+
+  for (let iteration: number = 1; iteration < time; iteration++) {
+    if (iteration === 5) {
+      road = road.replace(/\|/g, '*');
+    }
+
+    const matches: RegExpMatchArray | null = road.match(/S[\*\.]/g);
+
+    if (matches) {
+      road = road.replace(matches[0], lastChar + 'S');
+      lastChar = matches[0][1];
+    }
+
+    snapshots.push(road);
+  }
+
+  return snapshots;
+}
+
+
 Veamos el código paso a paso y luego veras un resumen de cómo llege a esa solución:
 
 ```typescript
