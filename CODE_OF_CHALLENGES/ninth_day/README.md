@@ -1,4 +1,4 @@
-![ninth.jpg](/ninth.png)
+![ninth.jpg](./ninth.png)
 
 # LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
