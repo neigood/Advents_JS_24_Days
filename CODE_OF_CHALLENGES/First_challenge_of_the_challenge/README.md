@@ -1,30 +1,37 @@
-En la fábrica de juguetes del Polo Norte, cada juguete tiene un número de identificación único.
-
-Sin embargo, debido a un error en la máquina de juguetes, algunos números se han asignado a más de un juguete.
-
-¡Encuentra el primer número de identificación que se ha repetido, donde la segunda ocurrencia tenga el índice más pequeño!
-
-En otras palabras, si hay más de un número repetido, debes devolver el número cuya segunda ocurrencia aparezca primero en la lista. Si no hay números repetidos, devuelve -1.
-
-const giftIds = [2, 1, 3, 5, 3, 2]
-const firstRepeatedId = findFirstRepeated(giftIds)
-console.log(firstRepeatedId) // 3
-// Aunque el 2 y el 3 se repiten
-// el 3 aparece primero por segunda vez
-
-const giftIds2 = [1, 2, 3, 4]
-const firstRepeatedId2 = findFirstRepeated(giftIds2)
-console.log(firstRepeatedId2) // -1
-// Es -1 ya que no se repite ningún número
-
-const giftIds3 = [5, 1, 5, 1]
-const firstRepeatedId3 = findFirstRepeated(giftIds3)
-console.log(firstRepeatedId3) // 5
-¡Ojo! Los elfos dicen que esto es una prueba técnica de Google.
-
-
+![ninth.jpg](./firstDay.png)
 
 # LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
+
+```typescript
+//Esta es una mejor version del codigo anterior//
+
+// Esta función encuentra el primer regalo repetido en una lista de regalos.
+function findFirstRepeated(gifts: number[]): number {
+  // Crear un mapa para almacenar los índices de los regalos que se han encontrado
+  const giftIndices = new Map<number, number>();
+
+  // Inicializar el índice actual
+  let index = 0;
+
+  // Iterar a través de la lista de regalos
+  for (const currentGift of gifts) {
+    // Verificar si el regalo actual ya ha sido encontrado antes
+    if (giftIndices.has(currentGift)) {
+      // Si sí, devolver el regalo repetido
+      return currentGift;
+    } else {
+      // Si no, almacenar el índice del regalo actual en el mapa
+      giftIndices.set(currentGift, index);
+    }
+
+    // Incrementar el índice para el siguiente regalo
+    index++;
+  }
+
+  // Si no se encuentra ningún regalo repetido, devolver -1
+  return -1;
+}
+
 
 La función `findFirstRepeated` toma un array de números llamado `gifts` como parámetro y devuelve el primer número que se repite en el array. Si no hay ningún número repetido, la función devuelve -1.
 
@@ -48,6 +55,36 @@ En resumen, la función utiliza un mapa para llevar un seguimiento de los regalo
 
 
 ----------------------------------------------------------************************************--------------------------------------------------
+
+// La función findFirstRepeated encuentra el primer regalo repetido en un array de regalos.
+function findFirstRepeated(gifts: number[]): number {
+  // Mapa para almacenar el índice de cada regalo.
+  const giftIndices = new Map<number, number>();
+
+  // Iterar sobre el array de regalos.
+  for (let currentIndex = 0; currentIndex < gifts.length; currentIndex++) {
+    const currentGift = gifts[currentIndex];
+
+    // Verificar si el regalo ya ha sido encontrado.
+    if (giftIndices.has(currentGift)) {
+      // Devolver el valor del primer regalo repetido.
+      return currentGift;
+    } else {
+      // Almacenar el índice del regalo actual en el mapa.
+      giftIndices.set(currentGift, currentIndex);
+    }
+  }
+
+  // Devolver -1 si no se encuentra ningún regalo repetido.
+  return -1;
+}
+
+// Ejemplo de uso:
+const gifts = [2, 1, 3, 5, 3, 2];
+const result = findFirstRepeated(gifts);
+
+// Mostrar el resultado en la consola (puedes ajustar esta parte según tus necesidades).
+console.log(result);
 
 
 esta es la explicasion al segundo codigo:
