@@ -3,7 +3,6 @@
 # LA RESOLUCIÓN DEL PROBLEMA Y EXPLICANDOLO UN POCO MAS A DETALLE.
 
 ```typescript
-//Esta es una mejor version del codigo anterior//
 
 // Esta función encuentra el primer regalo repetido en una lista de regalos.
 function findFirstRepeated(gifts: number[]): number {
